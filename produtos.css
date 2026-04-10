@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+}
+nav{
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    background-color: #EE82EE;
+}
+nav a {
+    text-decoration: none;
+    position: relative;
+    font-size: 25px;
+    margin: 10px;
+    color: black;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+section{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.cards{
+    border: solid 2px #EE82EE;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #EE82EE;
+    margin: 20px 0 0 0;
+    box-shadow: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 0;
+    font-style: normal;
+    position: relative;
+    top: -200;
+}
+.cards:hover{
+    cursor: pointer;
+    box-shadow: 2px 4px 10px -2px #000000;
+}
+#baunilha{
+    height: 250px;
+    width: 250px;
+}
+
+.cards h1{
+    font-size: 25px;
+}
+
+.cards p{
+    font-size: 15px;
+}
+.numero{
+    font-size: 20px;
+    margin: 0 0 4px 0;
+}
+#velas{
+    font-family: "Poppins", sans-serif;
+    font-weight: 0;
+    font-style: normal; 
+    position: relative;
+    right: -152px;
+    width: 400px;
+    top: 12px;
+}
+#vidros{
+    font-family: "Poppins", sans-serif;
+    font-weight: 0;
+    font-style: normal; 
+    position: relative;
+    top: 50px;
+    right: -152px;
+    width: 400px;
+    margin: 0 0 40px 0;
+}
