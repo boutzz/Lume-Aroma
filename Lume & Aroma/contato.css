@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+}
+
+nav {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    background-color: #EE82EE;
+}
+
+nav a {
+    text-decoration: none;
+    position: relative;
+    font-size: 25px;
+    margin: 10px;
+    color: black;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+#sim {
+    background-color: #BA55D3;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+#fulano {
+    text-align: center;
+    position: relative;
+    top: 80px;
+}
+
+#email {
+    text-align: center;
+    position: relative;
+    top: 100px;
+}
+
+input {
+    text-align: center;
+    position: relative;
+    top: 140px;
+    height: 40px;
+    width: 500px;
+    border-radius: 100px;
+    border: none;
+    display: block;
+    margin: 10px auto;
+}
+
+
+button {
+    text-align: center;
+    position: relative;
+    top: 180px;
+    display: block;
+    margin: 10px auto;
+    height: 40px;
+    width: 100px;
+    border-radius: 100px;
+    border: none;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #EE82EE;
+    transition: 2s;
+}
