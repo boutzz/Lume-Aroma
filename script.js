@@ -117,7 +117,7 @@ if (botaoEnviar) {
 
     const numero = "5511990043226";
 
-    const texto = `Olá! Me chamo ${nome}. ${mensagem} `;
+    const texto = `Olá! Me chamo ${nome}. ${mensagem}`;
 
     const url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(texto);
 
