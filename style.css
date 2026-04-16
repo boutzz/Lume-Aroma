@@ -97,6 +97,7 @@ body {
 }
 @media (max-width: 768px) {
   footer {
-    margin-top: 40px;
+    position: relative;
+    top: 100px;
   }
 }
