@@ -96,7 +96,7 @@ body {
   background: black;
 }
 @media (max-width: 768px) {
- section{
+#sobre{
     padding-bottom: 60px;
  }
   }
