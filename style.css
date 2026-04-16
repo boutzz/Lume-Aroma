@@ -96,7 +96,7 @@ body {
   background: black;
 }
 @media (max-width: 768px) {
- footer{
-    position: static;
+ section{
+    padding-bottom: 60px;
  }
   }
