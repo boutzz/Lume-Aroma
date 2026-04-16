@@ -96,7 +96,7 @@ body {
   background: black;
 }
 @media (max-width: 768px) {
-  footer {
-    background: red;
+  main {
+    margin-bottom: 40px;
   }
 }
