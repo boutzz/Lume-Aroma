@@ -96,8 +96,7 @@ body {
   background: black;
 }
 @media (max-width: 768px) {
-  footer {
-    position: relative;
-    top: 100px;
+  section:last-of-type {
+    margin-bottom: 40px;
   }
 }
