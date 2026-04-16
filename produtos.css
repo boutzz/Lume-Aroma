@@ -112,3 +112,20 @@ button:hover {
     font-style: normal; 
     text-align: center;
 }
+footer{
+    background-color: #BA55D3;
+    text-align: left;
+    font-size: 15px;
+    padding: 30px;
+    margin: 10px 0 0 0;
+}
+
+.textos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px;
+}
+
+footer p{
+    margin: 5px;
+}

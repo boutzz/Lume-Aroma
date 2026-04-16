@@ -83,3 +83,20 @@ button:hover{
     background-color: #EE82EE;
     transition: 2s;
 }
+footer{
+    background-color: #7B68EE;
+    text-align: left;
+    font-size: 15px;
+    padding: 30px;
+    margin: 195px 0 0 0;
+}
+
+.textos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px;
+}
+
+footer p{
+    margin: 5px;
+}
