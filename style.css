@@ -95,3 +95,8 @@ body {
   margin-left: 10px;
   background: black;
 }
+@media (max-width: 768px) {
+  footer {
+    margin-top: 40px;
+  }
+}
