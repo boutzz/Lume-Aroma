@@ -101,18 +101,9 @@ footer p{
     margin: 5px;
 }
 @media (max-width: 768px) {
-  input, textarea {
+  input, #fulano,#email {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
   }
-}
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 1;
 }
