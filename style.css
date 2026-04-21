@@ -100,6 +100,7 @@ body {
     height: auto !important;
     overflow: visible;
  }
+}
 @media (max-width: 768px) {
   main, section {
     display: block;
