@@ -131,7 +131,12 @@ footer p{
 }
 
 @media (max-width: 768px) {
-  h1 {
-    color: blue;
+  #vidros {
+    text-align: center;
+}
+}
+@media (max-width: 768px) {
+  #velas {
+    text-align: center;
 }
 }
