@@ -139,7 +139,7 @@ footer p{
 @media (max-width: 768px) {
  #velas {
     position: relative;
-    left: 20px;
+    left: 40px;
     width: 250px;
   }
 }
