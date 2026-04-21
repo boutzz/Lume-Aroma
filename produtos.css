@@ -132,7 +132,7 @@ footer p{
 @media (max-width: 768px) {
   #vidros, #velas {
     position: relative;
-    left: -5px;
+    margin-left: -5px;
     transform: none;
     margin: 0 auto;
     
