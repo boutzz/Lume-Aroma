@@ -133,7 +133,7 @@ footer p{
   #vidros, #velas {
     background-color: red;
     position: relative;
-    left: -10px;
-    width: 300px;
+    left: 10px;
+    width: 350px;
   }
 }
