@@ -133,9 +133,16 @@ footer p{
   #vidros, #velas {
     position: relative;
     left: 0;
-    right: 0;
-    margin-left: 0;
     transform: none;
+    margin: 0 auto;
+    
     text-align: center;
+    padding: 0 12px;
+
+    max-width: 100%;
+    width: 100%;
+
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 }
