@@ -131,18 +131,8 @@ footer p{
 }
 @media (max-width: 768px) {
   #vidros, #velas {
-    transform: none;
-    margin: 0 auto;
-    font-size: 19px;
-    
-    text-align: center;
-    padding: 0 12px;
-
-    max-width: 100%;
     width: 100%;
-
-    word-break: break-word;
-    overflow-wrap: break-word;
+    text-align: center;
     margin-bottom: 20px;
   }
 }
