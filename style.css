@@ -106,15 +106,4 @@ body {
     display: block;
   }
 }
-@media (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
-}
-@media (max-width: 768px) {
-  h2, h3 {
-    text-align: center;
-    margin-left: 0;
-    padding-left: 0;
-  }
-}
+
