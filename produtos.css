@@ -138,8 +138,9 @@ footer p{
 
 @media (max-width: 768px) {
   h1 {
+    font-size: 22px;
     text-align: center;
-    margin-left: 0;
-    padding-left: 0;
+    padding: 0 10px;
+    word-break: break-word;
   }
 }
