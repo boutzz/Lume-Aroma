@@ -129,9 +129,3 @@ footer{
 footer p{
     margin: 5px;
 }
-
-@media (max-width: 768px) {
-  #vidros, #velas {
-    background: red;
-  }
-}
