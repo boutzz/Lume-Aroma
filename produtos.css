@@ -130,10 +130,16 @@ footer p{
     margin: 5px;
 }
 @media (max-width: 768px) {
-  #vidros, #velas {
-    background-color: red;
+  #vidros {
     position: relative;
     left: 10px;
     width: 350px;
+  }
+}
+@media (max-width: 768px) {
+ #velas {
+    position: relative;
+    left: 20px;
+    width: 250px;
   }
 }
