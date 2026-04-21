@@ -131,15 +131,8 @@ footer p{
 }
 
 @media (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
-}
-
-@media (max-width: 768px) {
   h1 {
-    width: 100%;
-    max-width: 100%;
-    overflow-wrap: break-word;
-  }
+    position: relative;
+    right: 50px;
+}
 }
