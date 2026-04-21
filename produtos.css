@@ -134,6 +134,6 @@ footer p{
     background-color: red;
     position: relative;
     left: -10px;
-    width: 0;
+    width: 40px;
   }
 }
