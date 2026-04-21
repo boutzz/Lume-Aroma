@@ -129,3 +129,13 @@ footer{
 footer p{
     margin: 5px;
 }
+@media (max-width: 768px) {
+  #vidros, #velas {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-left: 0;
+    transform: none;
+    text-align: center;
+  }
+}
