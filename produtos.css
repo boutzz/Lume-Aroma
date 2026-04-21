@@ -131,12 +131,13 @@ footer p{
 }
 
 @media (max-width: 768px) {
-  #vidros {
+  #vidros, #velas {
+    font-size: 22px;
     text-align: center;
-}
-}
-@media (max-width: 768px) {
-  #velas {
-    text-align: center;
-}
+    margin: 0 auto;
+    padding: 0 10px;
+    max-width: 100%;
+    white-space: normal;
+    word-break: break-word;
+  }
 }
