@@ -132,7 +132,6 @@ footer p{
 
 @media (max-width: 768px) {
   h1 {
-    position: relative;
-    right: 50px;
+    color: blue;
 }
 }
