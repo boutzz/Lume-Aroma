@@ -101,9 +101,14 @@ footer p{
     margin: 5px;
 }
 @media (max-width: 768px) {
-  input, #fulano,#email {
+  input {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
+  }
+}
+@media (max-width: 768px) {
+  #email {
+    font-size: 17px;
   }
 }
