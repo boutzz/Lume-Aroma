@@ -113,3 +113,11 @@ body {
     object-fit: cover;
   }
 }
+@media (max-width: 768px) {
+  #foto1 {
+    background-image: url("imagens/celular.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
