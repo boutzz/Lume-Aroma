@@ -108,6 +108,7 @@ body {
 }
 @media (max-width: 768px) {
   .inicio img {
+    content: url("imagens/celular.jpeg");
     width: 100%;
     height: auto;
     object-fit: cover;
