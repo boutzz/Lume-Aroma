@@ -23,7 +23,7 @@ nav{
     font-family: "Poppins", sans-serif;
     font-weight: 100;
     font-style: normal;
-    background-color: #EE82EE;
+    background-color: #A98F7A;
 }
 nav a {
     text-decoration: none;
@@ -44,7 +44,7 @@ section img{
 }
 
 #sobre{
-    background-color: #FF00FF;
+    background-color: #EDE3DA;
     color: black;
     font-family: "Poppins", sans-serif;
     font-weight: 00;
@@ -63,7 +63,7 @@ section li{
 }
 
 footer{
-    background-color: #BA55D3;
+    background-color: #A98F7A;
     text-align: left;
     font-size: 15px;
     padding: 30px;
