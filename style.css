@@ -10,12 +10,12 @@
 }
 header {
     text-align: center;
-    font-family: "Poppins", sans-serif;
+    font-family: "Playwrite DE SAS", cursive;
     font-weight: 100;
     font-style: normal;
     position: sticky;
     top: 0;
-    background-color: white;
+    background-color: #EDE3DA;
     z-index: 1000;
 }
 nav{
@@ -39,6 +39,8 @@ nav a:hover {
 section img{
     height: 800px;
     width: 100%; 
+    object-fit: cover;
+    object-position: top;
     margin-bottom: 0;
     display: block;
 }
@@ -46,10 +48,10 @@ section img{
 #sobre{
     background-color: #EDE3DA;
     color: black;
-    font-family: "Poppins", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 00;
     font-style: normal;
-    height: 700px;
+    height: 720px;
     text-align: center;
 }
 

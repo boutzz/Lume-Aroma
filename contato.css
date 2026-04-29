@@ -5,12 +5,12 @@
 
 header {
     text-align: center;
-    font-family: "Poppins", sans-serif;
+    font-family: "Playwrite DE SAS", cursive;
     font-weight: 100;
     font-style: normal;
     position: sticky;
     top: 0;
-    background-color: white;
+    background-color: #EDE3DA;
     z-index: 1000;
 }
 
@@ -19,7 +19,7 @@ nav {
     font-family: "Poppins", sans-serif;
     font-weight: 100;
     font-style: normal;
-    background-color: #EE82EE;
+    background-color: #A98F7A;
 }
 
 nav a {
@@ -35,8 +35,8 @@ nav a:hover {
 }
 
 #sim {
-    background-color: #BA55D3;
-    font-family: "Poppins", sans-serif;
+    background-color: #EDE3DA;
+    font-family: "Montserrat", sans-serif;
     font-weight: 100;
     font-style: normal;
 }
@@ -80,11 +80,11 @@ button {
 
 button:hover{
     cursor: pointer;
-    background-color: #EE82EE;
+    background-color: #EDE3DA;
     transition: 2s;
 }
 footer{
-    background-color: #7B68EE;
+    background-color: #A98F7A;
     text-align: left;
     font-size: 15px;
     padding: 30px;
