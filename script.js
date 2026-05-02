@@ -1,132 +1,119 @@
-let carrinho = [];
+let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
 const botoes = document.querySelectorAll(".btn-comprar");
+const lista = document.getElementById("lista-carrinho");
 const contador = document.getElementById("contador");
-const finalizar = document.getElementById("finalizar");
+const icone = document.getElementById("icone-carrinho");
+const box = document.getElementById("carrinho-box");
 
-botoes.forEach(botao => {
-    botao.addEventListener("click", () => {
-
-        // tenta pegar o card do produto (com ou sem .produto)
-        let card = botao.closest(".produto") || botao.parentElement;
-
-        const produto = botao.dataset.produto;
-        const preco = botao.dataset.preco;
-
-        carrinho.push({
-            nome: produto,
-            preco: preco
-        });
-
-        atualizarTotal();
-
-        // atualiza contador (se existir)
-        if (contador) {
-            contador.innerText = carrinho.length;
-        }
-
-        // efeito no botão
-        botao.innerText = "✔";
-
-        setTimeout(() => {
-            botao.innerText = "Adicionar";
-        }, 1000);
-
-    });
+// ABRIR / FECHAR
+icone.addEventListener("click", () => {
+  box.classList.toggle("fechado");
 });
 
-if (finalizar) {
-    finalizar.addEventListener("click", () => {
+// ADICIONAR PRODUTO
+botoes.forEach(botao => {
+  botao.addEventListener("click", () => {
 
-        if (carrinho.length === 0) {
-            alert("Carrinho vazio!");
-            return;
-        }
+    const nome = botao.dataset.produto;
+    const preco = botao.dataset.preco;
 
-        const numero = "5511990043226";
+    const itemExistente = carrinho.find(item => item.nome === nome);
 
-        const mensagem =
-            "Olá! Quero comprar os produtos:\n" +
-            carrinho.map(item => item.nome + " - " + item.preco).join("\n");
+    if (itemExistente) {
+      itemExistente.qtd++;
+    } else {
+      carrinho.push({ nome, preco, qtd: 1 });
+    }
 
-        const url =
-            "https://wa.me/" +
-            numero +
-            "?text=" +
-            encodeURIComponent(mensagem);
+    atualizarCarrinho();
+  });
+});
 
-        window.open(url, "_blank");
+// ATUALIZAR
+function atualizarCarrinho() {
+  lista.innerHTML = "";
 
-    });
+  carrinho.forEach((item, index) => {
+    const li = document.createElement("li");
+
+    li.innerHTML = `
+      <span>${item.nome}</span>
+      <div>
+        <button onclick="diminuir(${index})">-</button>
+        ${item.qtd}
+        <button onclick="aumentar(${index})">+</button>
+      </div>
+    `;
+
+    lista.appendChild(li);
+  });
+
+  contador.innerText = carrinho.reduce((total, item) => total + item.qtd, 0);
+
+  const total = calcularTotal();
+
+const totalElement = document.createElement("p");
+totalElement.innerHTML = `<strong>Total: R$ ${total.toFixed(2)}</strong>`;
+
+lista.appendChild(totalElement);
+
+localStorage.setItem("carrinho", JSON.stringify(carrinho));
 }
 
-function atualizarTotal() {
+// AUMENTAR
+function aumentar(index) {
+  carrinho[index].qtd++;
+  atualizarCarrinho();
+}
+
+// DIMINUIR
+function diminuir(index) {
+  carrinho[index].qtd--;
+
+  if (carrinho[index].qtd <= 0) {
+    carrinho.splice(index, 1);
+  }
+
+  atualizarCarrinho();
+
+}
+const finalizar = document.getElementById("finalizar");
+
+finalizar.addEventListener("click", () => {
+
+  if (carrinho.length === 0) {
+    alert("Seu carrinho está vazio!");
+    return;
+  }
+
+  let mensagem = "Olá! Quero comprar:%0A%0A";
+
+  carrinho.forEach(item => {
+    mensagem += `- ${item.nome} (x${item.qtd})%0A`;
+  });
+
+  const telefone = "5511990043226"; // 👈 COLOCA SEU NÚMERO
+
+  const total = calcularTotal();
+mensagem += `%0ATotal: R$ ${total.toFixed(2)}`;
+
+  const url = `https://wa.me/${telefone}?text=${mensagem}`;
+
+  window.open(url, "_blank");
+});
+function calcularTotal() {
   let total = 0;
 
   carrinho.forEach(item => {
-    // remove "R$" e troca vírgula por ponto
-    let preco = item.preco
+    let valor = item.preco
       .replace("R$", "")
       .replace(",", ".")
       .trim();
 
-    total += parseFloat(preco);
+    total += parseFloat(valor) * item.qtd;
   });
 
-  const totalElemento = document.getElementById("total");
-
-  if (totalElemento) {
-    totalElemento.innerText = total.toFixed(2);
-  }
+  return total;
 }
-
-const removerUltimo = document.getElementById("remover-ultimo");
-
-if (removerUltimo) {
-  removerUltimo.addEventListener("click", () => {
-    
-    if (carrinho.length === 0) {
-      alert("Carrinho já está vazio!");
-      return;
-    }
-
-    carrinho.pop();
-
-    if (contador) {
-      contador.innerText = carrinho.length;
-    }
-
-    atualizarTotal();
-
-    alert("Último item removido!");
-  });
-}
-
-const botaoEnviar = document.getElementById("enviar");
-
-if (botaoEnviar) {
-  botaoEnviar.addEventListener("click", () => {
-
-    const nome = document.getElementById("nome").value;
-    const mensagem = document.getElementById("mensagem").value;
-
-    if (!nome || !mensagem) {
-      alert("Preencha todos os campos!");
-      return;
-    }
-
-    const numero = "5511990043226";
-
-    const texto = `Olá! Me chamo ${nome}. ${mensagem}`;
-
-    const url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(texto);
-
-    window.open(url, "_blank");
-  });
-}
-
-//* aqui*// 
-botaoEnviar.addEventListener("click", () => {
-
-  window.open("https://wa.me/5511990043226?text=Test", "_blank");
-});
+atualizarCarrinho();

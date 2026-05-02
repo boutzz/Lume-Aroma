@@ -129,6 +129,51 @@ footer{
 footer p{
     margin: 5px;
 }
+
+#icone-carrinho {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: black;
+  color: white;
+  padding: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#carrinho-box {
+  position: fixed;
+  top: 70px;
+  right: 10px;
+  width: 260px;
+  background: #A98F7A;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 2000;
+  transition: 0.3s;
+}
+
+#lista-carrinho li{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fechado {
+  display: none;
+}
+#finalizar {
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px;
+  border: none;
+  background: #25D366;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
 @media (max-width: 768px) {
   #vidros {
     position: relative;
