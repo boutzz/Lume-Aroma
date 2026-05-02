@@ -117,3 +117,24 @@ function calcularTotal() {
   return total;
 }
 atualizarCarrinho();
+
+window.addEventListener("load", () => {
+  const banner = document.getElementById("banner");
+
+  function trocarImagem() {
+    const largura = window.innerWidth;
+
+    if (largura <= 768) {
+      if (!banner.src.includes("celular2.jpeg")) {
+        banner.src = "imagens/celular2.jpeg";
+      }
+    } else {
+      if (!banner.src.includes("principal.jpeg")) {
+        banner.src = "imagens/principal.jpeg";
+      }
+    }
+  }
+
+  trocarImagem();
+  window.addEventListener("resize", trocarImagem);
+});
