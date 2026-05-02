@@ -125,13 +125,9 @@ window.addEventListener("load", () => {
     const largura = window.innerWidth;
 
     if (largura <= 768) {
-      if (!banner.src.includes("celular2.jpeg")) {
-        banner.src = "imagens/celular2.jpeg";
-      }
+      banner.src = "imagens/celular2.jpeg?v=2";
     } else {
-      if (!banner.src.includes("principal.jpeg")) {
-        banner.src = "imagens/principal.jpeg";
-      }
+      banner.src = "imagens/principal.jpeg?v=2";
     }
   }
 
