@@ -108,19 +108,8 @@ body {
     display: block;
   }
 }
-@media (max-width: 768px) {
-  .inicio img {
-    content: url("imagens/celular2.jpeg");
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-}
-@media (max-width: 768px) {
-  #foto1 {
-    background-image: url("imagens/celular2.jpeg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+.inicio img{
+  width: 100%;
+  height: auto;
+  display: block;
 }
