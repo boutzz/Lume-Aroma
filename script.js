@@ -118,10 +118,3 @@ function calcularTotal() {
 }
 atualizarCarrinho();
 
-window.addEventListener("load", () => {
-  const banner = document.getElementById("banner");
-
-  alert("Largura: " + window.innerWidth);
-
-  banner.src = "https://via.placeholder.com/300";
-});
