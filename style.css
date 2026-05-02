@@ -108,7 +108,14 @@ body {
     display: block;
   }
 }
-.inicio img{
+
+@media (max-width: 768px) {
+  .inicio img {
+    content: url("imagens/celular2.jpeg");
+  }
+}
+
+.inicio img {
   width: 100%;
   height: auto;
   display: block;

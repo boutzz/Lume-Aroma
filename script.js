@@ -121,16 +121,7 @@ atualizarCarrinho();
 window.addEventListener("load", () => {
   const banner = document.getElementById("banner");
 
-  function trocarImagem() {
-    const largura = window.innerWidth;
+  alert("Largura: " + window.innerWidth);
 
-    if (largura <= 768) {
-      banner.src = "imagens/celular2.jpeg?v=2";
-    } else {
-      banner.src = "imagens/principal.jpeg?v=2";
-    }
-  }
-
-  trocarImagem();
-  window.addEventListener("resize", trocarImagem);
+  banner.src = "https://via.placeholder.com/300";
 });
