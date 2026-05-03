@@ -118,3 +118,15 @@ function calcularTotal() {
 }
 atualizarCarrinho();
 
+document.getElementById("enviar").addEventListener("click", () => {
+  const nome = document.getElementById("nome").value;
+  const mensagem = document.getElementById("mensagem").value;
+
+  const texto = `Olá, meu nome é ${nome}. ${mensagem}`;
+
+  const numero = "5511990043226"; // seu número
+
+  const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+  window.open(url, "_blank");
+});
