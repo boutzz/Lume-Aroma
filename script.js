@@ -118,15 +118,20 @@ function calcularTotal() {
 }
 atualizarCarrinho();
 
-document.getElementById("enviar").addEventListener("click", () => {
-  const nome = document.getElementById("nome").value;
-  const mensagem = document.getElementById("mensagem").value;
+function enviarWhats() {
+    const nome = document.getElementById("nome").value;
+    const mensagem = document.getElementById("mensagem").value;
 
-  const texto = `Olá, meu nome é ${nome}. ${mensagem}`;
+    if (!nome || !mensagem) {
+        alert("Preencha todos os campos");
+        return;
+    }
 
-  const numero = "5511990043226"; // seu número
+    const telefone = "55119990043226";
 
-  const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+    const texto = `Olá, me chamo ${nome}. ${mensagem}`;
 
-  window.open(url, "_blank");
-});
+    const url = `https://wa.me/${telefone}?text=${encodeURIComponent(texto)}`;
+
+    window.open(url, "_blank");
+}
